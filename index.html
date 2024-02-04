@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico">
     <title>Pokedex</title>
 
     <!-- Normalize CSS -->
@@ -24,18 +25,53 @@
 
 <body>
     <section class="content">
-        <h1>Pokedex</h1>
-
-        <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
-        </ol>
-
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
-        </div>
+        <h1>Pokedex: Select pokemon type</h1>
+        <div class="contentColumns">
+            <div class="pokedex">
+                <div class="optionsDiv">
+                    <div class="select">
+                        <select name="filter-poke" id="poke-type-filter" >
+                            <option value="all">all</option>
+                            <option value="bug">bug</option>
+                            <option value="dragon">dragon</option>
+                            <option value="electric">electric</option>
+                            <option value="fairy">fairy</option>
+                            <option value="fighting">fighting</option>
+                            <option value="fire">fire</option>
+                            <option value="flying">flying</option>
+                            <option value="ghost">ghost</option>
+                            <option value="grass">grass</option>
+                            <option value="ground">ground</option>
+                            <option value="ice">ice</option>
+                            <option value="normal">normal</option>
+                            <option value="poison">poison</option>
+                            <option value="psychic">psychic</option>
+                            <option value="rock">rock</option>
+                            <option value="steel">steel</option>
+                            <option value="water">water</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <ol id="pokemonList" class="pokemons">
+                </ol>
+            </div>
+        </div>        
+        
     </section>
+
+    <div class="modal" id="modal-id">
+        <div id="modalpoke">Pokemon com detalhes
+            <input type="button" value="X" class="closeButton">
+        </div>
+    </div>
+    <div id="github">
+        <p>Student:<br> Ronard Surichaqui <br>
+            <a href="https://github.com/ronard1" style="text-decoration: none; color: white;">GitHub Profile</a>
+        </p>
+    </div >
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
